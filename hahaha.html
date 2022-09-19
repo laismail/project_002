@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery.js">
+
+</script>
+
+<body>
+    <button id="btnGET">发起不带参数的GET请求</button>
+
+    <script>
+        $(function () {
+            $('#btnGET').on('click',function(){
+                $.ajax({
+                type:'get',
+                url:'https://ajax-base-api-t.itheima.net/api/getbooks',
+                date:{ id:1 },
+               success:function(res){console.log(res)}
+
+            })  
+            })
+         
+        })
+    </script>
+</body>
+
+</html>
